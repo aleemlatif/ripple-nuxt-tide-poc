@@ -1,0 +1,62 @@
+{
+  "name": "dcs-poc-spa",
+  "sdp_version": "1.25.0",
+  "description": "localhost",
+  "author": "Aleem Latif",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env BASIC_AUTH=0 nuxt",
+    "build": "run-script-os",
+    "build:default": "nuxt build --modern=client",
+    "build:win32": "nuxt build --modern=client",
+    "test:unit": "cross-env BASIC_AUTH=0 NODE_ENV=test jest --passWithNoTests",
+    "lint": "eslint --ext .js,.vue . --max-warnings 0 && sass-lint",
+    "lint:fix": "eslint --ext .js,.vue . --fix",
+    "start": "run-script-os",
+    "start:default": "nuxt start --modern=client",
+    "start:win32": "nuxt start --modern=client",
+    "start:build": "nuxt build --modern=client && nuxt start --modern=client"
+  },
+  "dependencies": {
+    "@dpc-sdp/ripple-nuxt-tide": "1.11.0",
+    "@nuxtjs/robots": "^2.0.0",
+    "dotenv": "^5.0.1",
+    "nuxt": "2.10.2",
+    "run-script-os": "^1.0.7"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-lodash": "^3.3.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "jest": "^24.9.0",
+    "lodash-webpack-plugin": "^0.11.5",
+    "husky": "^3.0.0",
+    "node-sass": "^4.11.0",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^6.0.7",
+    "sass-resources-loader": "^2.0.0",
+    "vue-jest": "^3.0.4",
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "IE 11",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-push": "yarn run lint && yarn run test:unit"
+    }
+  }
+}

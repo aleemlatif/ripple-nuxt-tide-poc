@@ -1,0 +1,17 @@
+.env
+
+# Dependencies.
+node_modules
+
+# Temporary files.
+npm-debug.log
+.nuxt
+.idea
+dist
+/assets/dcs-theme alias
+
+# tests
+coverage
+/test/e2e/videos
+/test/e2e/screenshots
+/test/e2e/results

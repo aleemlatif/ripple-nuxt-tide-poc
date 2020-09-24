@@ -1,0 +1,65 @@
+.rpl-site-footer {
+  background-image: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+
+  .rpl-site-footer__main {
+    padding: 1rem 0 1rem;
+    background-color: #333;
+    color: #fff;
+    font-size: .75rem;
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+
+    .rpl-footer-nav {
+      display: none;
+    }
+
+    .rpl-acknowledgement {
+      padding: 1rem 0 1rem;
+
+      .rpl-acknowledgement__flag {
+        display: none;
+      }
+
+      .rpl-acknowledgement__text {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .nsw-footer__upper {
+    padding-top: 0;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+
+    .section-links {
+      .section-links__group {
+        h3 {
+          font-size: 1.17rem;
+          margin-bottom: 1.25rem;
+        }
+
+        ul {
+          li {
+            margin-top: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
